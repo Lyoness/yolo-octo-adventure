@@ -1,0 +1,11 @@
+---
+language: go
+go:
+- 1.2.2
+- 1.3
+- tip
+before_install: go env
+before_script: go env
+after_script: go env
+after_success: go env
+after_failure: go env
