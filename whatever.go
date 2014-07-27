@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	fmt.Println("wat çæ≤≥πƒ")
+	fmt.Println("wat ø´¨ˆ∂˙†")
 }
