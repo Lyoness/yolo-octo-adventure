@@ -1,9 +1,9 @@
 package main
 
 import (
-  "fmt"
+	"fmt"
 )
 
 func main() {
-  fmt.Println("sure")
+	fmt.Println("wat çæ≤≥πƒ")
 }
