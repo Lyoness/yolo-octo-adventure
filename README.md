@@ -1,4 +1,4 @@
 yolo-octo-adventure
 ===================
 
-Travis GVM testing grounds
+Travis Go test project
