@@ -1,14 +1,4 @@
 ---
 language: go
 go:
-- 1.2.2
 - 1.3
-- tip
-cache:
-  directories:
-  - ~/gopath/src/github.com/meatballhat/yolo-octo-adventure
-before_install: go env
-before_script: go env
-after_script: go env
-after_success: go env
-after_failure: go env
