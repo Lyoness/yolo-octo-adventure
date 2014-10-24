@@ -4,6 +4,21 @@ go:
 - 1.0.3
 - 1.3.3
 - tip
+services:
+- cassandra
+- couchdb
+- elasticsearch
+- hbase
+- memcache
+- mongodb
+- mysql
+- neo4j-server
+- postgresql
+- rabbitmq
+- redis
+- riak
+addons:
+  postgresql: 9.3
 notifications:
   email:
     recipients:
