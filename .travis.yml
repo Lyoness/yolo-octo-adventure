@@ -19,6 +19,7 @@ services:
 - riak
 addons:
   postgresql: 9.3
+  ssh_known_hosts: bitbucket.org
 notifications:
   email:
     recipients:
