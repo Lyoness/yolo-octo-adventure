@@ -6,7 +6,6 @@ notifications:
   email:
     recipients:
     - dan@travis-ci.org
-    - daniel.buch@gmail.com
     on_success: always
     on_failure: always
 before_install:
