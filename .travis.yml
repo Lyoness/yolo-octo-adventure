@@ -1,7 +1,9 @@
 language: go
 sudo: false
 addons:
-  ssh_known_hosts: []
+  ssh_known_hosts:
+  - bitbucket.org
+  - sammich.meatballhat.com
 notifications:
   email:
     recipients:
