@@ -1,4 +1,8 @@
 language: go
+env:
+  global:
+  - secure: m7Cio9u9WZSkm0Vruy+yZhTASazy1on8viEb5eqcVHP6NZjfLZplnDDiDJTXFn1hMByx4I1w/chjIEx/J7SGVjgOaD9RzPDzeUXIExU+q/9J8y4t9WSlja7nOhuie5r9jjpvgOl4c1i8MMJRRvxF28J3T7ckT3lqXTK3oQ0nFlQ=
+  - secure: K5o2iMawKKMCynDuBlGy1hrk1I8MPGGfOYpKksw+IGHHW+9EgU7MGHNBG8D3mdrhQCRLccCqAUlQQ5T//oe9XjNi5kmrMKnjmAJo8PEclNkTPmOuf6NpB/n28+43YnODx8YGwjfC9M9NVtxNIXa1ObBfj40A2FDi7ctiWteizeU=
 addons:
   ssh_known_hosts: bitbucket.org
 notifications:
