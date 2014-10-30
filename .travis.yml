@@ -27,3 +27,5 @@ notifications:
     - daniel.buch@gmail.com
     on_success: always
     on_failure: always
+before_install:
+- git clone git@bitbucket.org:meatballhat/gittest.git
