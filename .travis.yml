@@ -1,4 +1,3 @@
----
 language: go
 addons:
   ssh_known_hosts: bitbucket.org
@@ -9,4 +8,7 @@ notifications:
     on_success: always
     on_failure: always
 before_install:
+- openssl aes-256-cbc -K $encrypted_7a2cbd433088_key -iv $encrypted_7a2cbd433088_iv
+  -in k -out ~/.ssh/k -d
+- ssh-add ~/.ssh/k
 - git clone git@bitbucket.org:meatballhat/gittest.git
