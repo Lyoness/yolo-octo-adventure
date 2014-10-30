@@ -1,6 +1,8 @@
 language: go
 addons:
-  ssh_known_hosts: bitbucket.org
+  ssh_known_hosts:
+  - bitbucket.org
+  - sammich.meatballhat.com
 notifications:
   email:
     recipients:
