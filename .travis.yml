@@ -3,11 +3,18 @@ sudo: false
 addons:
   ssh_known_hosts: bitbucket.org
   artifacts:
+    paths:
+    - build/
     key:
       secure: Z9d7HM2z32w2UXGNXB37BiQvdlZehuCeDIL/hiTMsgorLo0y0gmUm2SVbMFP0FtGXymZirs1JtIZ3ipIeNhLDoeQuTI86Iv1K4W7YOQaUCInI1XDSFp8guMmlDT8W7dHH6Sz+TExtXeXxOdl6iJVjdV4Ls2PudENC/GvTAGAIs4=
     secret:
       secure: XHihSocT7r/Hsprqp3YeeGFkUtKafnrYk5ljue+98eaTDTFfE2psCRNLHDF+8lp8YdtO/DRSfvn+u3C1qe3mmSWpbs1s+cd7PDR2boxwfVkL8XRdF7p1QSQGHk13wdmilLODGy3TjmsrEmPStSI1A8v99T2rLLlSJ4kbA7ZQwtE=
     bucket: travis-artifacts-staging
+script:
+- go build -x ./...
+after_script:
+- mkdir -p build
+- cp -v yolo-octo-adventure build/
 notifications:
   email:
     recipients:
