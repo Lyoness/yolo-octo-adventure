@@ -13,7 +13,7 @@ install:
 - curl -sL "http://www.coker.com.au/bonnie++/bonnie++-1.03e.tgz" | tar xzf -
 - cd bonnie++-1.03e && ./configure --prefix=$HOME && make && make install
 script:
-- ~/sbin/bonnie++ -s 512 -r 256
+  - ~/sbin/bonnie++ -s 512:256 -r 256
 notifications:
   email:
     recipients:
