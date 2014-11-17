@@ -9,14 +9,14 @@ env:
 - FOO=6
 - FOO=7
 - FOO=8
+- FOO=9
+- FOO=10
+- FOO=11
+- FOO=12
 install:
 - curl -sL "http://www.coker.com.au/bonnie++/bonnie++-1.03e.tgz" | tar xzf -
 - cd bonnie++-1.03e && ./configure --prefix=$HOME && make && make install
 script:
   - ~/sbin/bonnie++ -s 512:256 -r 256
 notifications:
-  email:
-    recipients:
-    - dan@travis-ci.org
-    on_success: always
-    on_failure: always
+  email: false
