@@ -1,26 +1,14 @@
 language: bash
 sudo: false
-# env:
-# - FOO=1
-# - FOO=2
-# - FOO=3
-# - FOO=4
-# - FOO=5
-# - FOO=6
-# - FOO=7
-# - FOO=8
-# - FOO=9
-# - FOO=10
-# - FOO=11
-# - FOO=12
-# - FOO=13
-# - FOO=14
-# - FOO=15
-# - FOO=16
-# - FOO=17
-# - FOO=18
-# - FOO=19
-# - FOO=20
+env:
+- FOO=1
+- FOO=2
+- FOO=3
+- FOO=4
+- FOO=5
+- FOO=6
+- FOO=7
+- FOO=8
 install:
 - curl -sL "http://www.coker.com.au/bonnie++/bonnie++-1.03e.tgz" | tar xzf -
 - cd bonnie++-1.03e && ./configure --prefix=$HOME && make && make install
