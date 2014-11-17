@@ -1,17 +1,26 @@
 language: go
 sudo: false
-addons:
-  artifacts:
-    paths:
-    - build/
-    key:
-      secure: Z9d7HM2z32w2UXGNXB37BiQvdlZehuCeDIL/hiTMsgorLo0y0gmUm2SVbMFP0FtGXymZirs1JtIZ3ipIeNhLDoeQuTI86Iv1K4W7YOQaUCInI1XDSFp8guMmlDT8W7dHH6Sz+TExtXeXxOdl6iJVjdV4Ls2PudENC/GvTAGAIs4=
-    secret:
-      secure: XHihSocT7r/Hsprqp3YeeGFkUtKafnrYk5ljue+98eaTDTFfE2psCRNLHDF+8lp8YdtO/DRSfvn+u3C1qe3mmSWpbs1s+cd7PDR2boxwfVkL8XRdF7p1QSQGHk13wdmilLODGy3TjmsrEmPStSI1A8v99T2rLLlSJ4kbA7ZQwtE=
-    bucket: travis-artifacts-staging
-after_script:
-- mkdir -p build
-- cp -v ~/gopath/bin/yolo-octo-adventure build/
+env:
+- FOO=1
+- FOO=2
+- FOO=3
+- FOO=4
+- FOO=5
+- FOO=6
+- FOO=7
+- FOO=8
+- FOO=9
+- FOO=10
+- FOO=11
+- FOO=12
+- FOO=13
+- FOO=14
+- FOO=15
+- FOO=16
+- FOO=17
+- FOO=18
+- FOO=19
+- FOO=20
 notifications:
   email:
     recipients:
