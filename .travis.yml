@@ -1,26 +1,11 @@
 language: bash
 sudo: false
-env:
-- FOO=1
-- FOO=2
-- FOO=3
-- FOO=4
-- FOO=5
-- FOO=6
-- FOO=7
-- FOO=8
-- FOO=9
-- FOO=10
-- FOO=11
-- FOO=12
-- FOO=13
-- FOO=14
-- FOO=15
-- FOO=16
-install:
-- curl -sL "http://www.coker.com.au/bonnie++/bonnie++-1.03e.tgz" | tar xzf -
-- cd bonnie++-1.03e && ./configure --prefix=$HOME && make && make install
-script:
-- ~/sbin/bonnie++ -s 512:256 -r 256
+install: echo get real
+script: echo whatebbs
 notifications:
   email: false
+  irc:
+    template:
+    - "%{repository}/%{branch}/%{build_number}: %{message} -- %{build_url}"
+    channels:
+    - irc.freenode.net#meatballhat
