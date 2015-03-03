@@ -7,3 +7,5 @@ addons:
     username: meatballhat
     access_key:
       secure: b4nzFxXgapIp5O1Oxh2uv8hxYTp6xsRJqw8SZvOWisABi53FV03jByPSeIMLTF4/PM7kaPRsEJWyUTZnsxzsBas4tYXLJd19t9oCFNrO7V3MBr/nJUFV5h5FDDDNdkaSiLrydVPQBohhy9YLfo65d4l19o4CK8eQ0v9YKaCkUeY=
+before_script:
+- rackup --port 8000 &
