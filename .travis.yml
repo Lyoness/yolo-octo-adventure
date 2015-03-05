@@ -12,4 +12,4 @@ addons:
 before_script:
 - gem install rack
 - rackup --port 8000 &
-- echo with great vigor
+- echo maximum wonder
