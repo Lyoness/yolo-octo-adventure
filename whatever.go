@@ -1,7 +1,6 @@
-package main
+package yolooctoadventure
 
 import (
-	"os"
 	"time"
 
 	"github.com/Sirupsen/logrus"
@@ -9,7 +8,7 @@ import (
 	"github.com/meatballhat/yolo-octo-adventure/sub"
 )
 
-func main() {
+func BuildApp() *cli.App {
 	log := logrus.New()
 	app := cli.NewApp()
 	app.Action = func(_ *cli.Context) {
@@ -19,5 +18,5 @@ func main() {
 		}
 	}
 
-	app.Run(os.Args)
+	return app
 }
