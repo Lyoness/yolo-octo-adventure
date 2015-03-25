@@ -11,3 +11,10 @@ addons:
   - unknown-source
   apt_packages:
   - chefdk
+  - python2.3
+install: echo install
+script:
+- command -v chef
+- command -v shef
+- command -v kitchen
+- command -v python2.3
