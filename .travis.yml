@@ -1,4 +1,4 @@
-language: ruby
+language: generic
 sudo: false
 cache:
   bundler: true
@@ -11,6 +11,3 @@ addons:
   - unknown-source
   apt_packages:
   - chefdk
-before_script:
-- gem install rack
-- rackup --port 8000 &
