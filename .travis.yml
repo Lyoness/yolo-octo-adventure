@@ -7,7 +7,7 @@ notifications:
 addons:
   apt_sources:
   - chef-stable-precise
-  - deadsnakes-precise
+  - deadsnakes
   - unknown-source
   apt_packages:
   - chefdk
