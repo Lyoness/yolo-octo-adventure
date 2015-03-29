@@ -1,14 +1,9 @@
 language: ruby
 sudo: false
-cache:
-  bundler: true
-notifications:
-  email: false
 addons:
-  sauce_connect:
-    username: meatballhat
-    access_key:
-      secure: b4nzFxXgapIp5O1Oxh2uv8hxYTp6xsRJqw8SZvOWisABi53FV03jByPSeIMLTF4/PM7kaPRsEJWyUTZnsxzsBas4tYXLJd19t9oCFNrO7V3MBr/nJUFV5h5FDDDNdkaSiLrydVPQBohhy9YLfo65d4l19o4CK8eQ0v9YKaCkUeY=
-before_script:
-- gem install rack
-- rackup --port 8000 &
+  apt_packages:
+  - libzmq-dev
+  apt_sources:
+  - ubuntu-toolchain-r-test
+install: echo install
+script: echo script
