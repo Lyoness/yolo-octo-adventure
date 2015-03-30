@@ -1,11 +1,4 @@
 language: ruby
-sudo: false
-addons:
-  apt:
-    packages:
-    - chef
-    - chefdk
-    sources:
-    - chef-stable-precise
-install: echo install
-script: echo script
+sudo: nothanks
+install: sudo echo install
+script: sudo echo script
