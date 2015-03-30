@@ -1,9 +1,11 @@
 language: ruby
 sudo: false
 addons:
-  apt_packages:
-  - libzmq-dev
-  apt_sources:
-  - ubuntu-toolchain-r-test
+  apt:
+    packages:
+    - chef
+    - chefdk
+    sources:
+    - chef-stable-precise
 install: echo install
 script: echo script
