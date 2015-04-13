@@ -2,7 +2,8 @@ language: generic
 sudo: false
 install: echo install
 script: echo script
-apt:
-  packages:
-  - unzip
-  - curl
+addons:
+  apt:
+    packages:
+    - unzip
+    - curl
