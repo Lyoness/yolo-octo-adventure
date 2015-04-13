@@ -1,4 +1,5 @@
-language: ruby
+language: generic
+sudo: false
 install: echo install
 script: echo script
 apt:
