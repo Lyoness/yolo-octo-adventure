@@ -1,4 +1,7 @@
 language: ruby
 install: echo install
 script: echo script
-before_deploy: travis_retry sudo echo something
+apt:
+  packages:
+  - unzip
+  - curl
