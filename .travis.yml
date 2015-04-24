@@ -1,33 +1,4 @@
 language: generic
-sudo: false
+sudo: dantastic
 install: echo install
 script: echo script
-addons:
-  apt:
-    packages: &native_deps
-      - git
-      - curl
-
-matrix:
-  include:
-    # Job 1
-    - env: BUILD_64BIT_NATIVE=1
-      addons:
-        apt:
-          packages:
-            - *native_deps
-            - [zsh, zip]    # 64-bit specific packages goes here
-    # Job 2
-    - env: BUILD_32BIT_NATIVE=1
-      addons:
-        apt:
-          packages:
-            - *native_deps
-            - &32bit_deps ["zlib1g:i386", "libxext-dev:i386"]    # 32-bit specific goes here
-    # Job 3
-    - env: BUILD_32BIT_MINGW=1
-      addons:
-        apt:
-          packages:
-            - ["binutils-mingw-w64-x86-64", "mingw32"]   # MinGW specific packages goes here
-            - *32bit_deps  # Reuse the 32-bit dependency list one more time
