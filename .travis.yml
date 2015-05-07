@@ -1,5 +1,7 @@
 language: go
 sudo: false
-before_script:
-- echo $GOPATH
-- echo $PATH
+addons:
+  artifacts:
+    target_paths: build/linux/amd64/
+after_script:
+- cp -v ~/gopath/bin/yolo-octo-adventure ./
