@@ -1,5 +1,4 @@
-language: go
+language: generic
 osx_image: ubuntu-trusty
-before_script:
-- echo $GOPATH
-- echo $PATH
+install: echo install
+script: docker run busybox echo ohai
