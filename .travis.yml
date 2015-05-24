@@ -1,7 +1,5 @@
 language: go
-os: osx
 osx_image: ubuntu-trusty
-sudo: false
 before_script:
 - echo $GOPATH
 - echo $PATH
