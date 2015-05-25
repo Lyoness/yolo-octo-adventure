@@ -1,4 +1,4 @@
 language: generic
 osx_image: trusty-minimal
 install: echo install
-script: docker run busybox echo ohai
+script: docker run -it stackbrew/ubuntu:trusty echo ohai
