@@ -1,4 +1,6 @@
 language: generic
 osx_image: trusty-minimal
-install: echo install
-script: docker run -it stackbrew/ubuntu:trusty echo ohai
+install: docker version
+script:
+- docker build -t yolo-octo-adventure .
+- docker run -it yolo-octo-adventure
