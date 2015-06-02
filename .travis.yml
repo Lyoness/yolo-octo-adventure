@@ -1,5 +1,5 @@
 language: generic
-osx_image: trusty-minimal
+dist: trusty
 install: docker version
 script:
 - docker build -t yolo-octo-adventure .
