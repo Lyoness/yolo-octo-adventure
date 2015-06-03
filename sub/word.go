@@ -1,5 +1,5 @@
 package sub
 
 func Word() string {
-	return "∞§ª§ª§¶ª∂¶ƒª¶§ª¶∂§¶•ª"
+	return "˙ˆ∂†ƒ©ç˚†\\ƒ∂˙˜ˆ˚ƒ†∂\\œˆ∂œ∫˜∆∑∂≈˜˙"
 }
