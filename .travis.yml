@@ -1,5 +1,4 @@
-language: go
-sudo: false
-before_script:
-- echo $GOPATH
-- echo $PATH
+language: objective-c
+osx_image: beta-xcode6.3
+install: echo install
+script: echo script
