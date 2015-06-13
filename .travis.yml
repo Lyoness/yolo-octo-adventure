@@ -2,4 +2,4 @@ language: ruby
 dist: trusty
 before_install:
 - sudo apt-get update -yqq
-- sudo apt-get install -yq libdconf0
+- sudo apt-get install -yq ureadahead
