@@ -1,5 +1,2 @@
-language: go
-sudo: false
-before_script:
-- echo $GOPATH
-- echo $PATH
+language: ruby
+dist: trusty
