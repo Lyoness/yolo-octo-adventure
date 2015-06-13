@@ -3,6 +3,6 @@ dist: trusty
 before_install:
 - sudo apt-get update -yqq
 - sudo apt-get install -yq ureadahead
-- env
+- env | sort
 - stat /.dockerenv /.dockerinit
 - ip addr
