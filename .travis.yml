@@ -12,9 +12,10 @@ before_install:
 - sudo mv -v wrapdocker /usr/local/bin/docker
 - sudo chmod +x /usr/local/bin/docker
 - sudo sed -i '/^#DOCKER=/s/^#//' /etc/default/docker
-- sudo start docker
+- sudo start docker || echo 'whatever really'
 script:
 - sudo docker run hello-world
 after_script:
+- sudo cat /etc/default/docker
 - sudo cat /var/log/upstart/docker.log
 - sudo dmesg
