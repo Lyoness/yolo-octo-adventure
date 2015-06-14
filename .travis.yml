@@ -5,17 +5,8 @@ before_install:
 - ip addr
 - env | sort
 - sudo apt-get update -yqq
-- sudo apt-get install -yq lvm2
-- if ! hash docker ; then curl https://get.docker.io | sudo bash ; fi
-- sudo stop docker || echo 'whatever'
-- curl -sSLO https://raw.githubusercontent.com/jpetazzo/dind/8d771e6/wrapdocker
-- sudo mv -v wrapdocker /usr/local/bin/docker
-- sudo chmod +x /usr/local/bin/docker
-- sudo sed -i '/^#DOCKER=/s/^#//' /etc/default/docker
-- sudo start docker || echo 'whatever really'
+- sudo apt-get install -yq ureadahead lvm2
 script:
-- sudo docker run hello-world
+- sudo echo ohai
 after_script:
-- sudo cat /etc/default/docker
-- sudo cat /var/log/upstart/docker.log
 - sudo dmesg
