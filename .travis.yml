@@ -10,4 +10,4 @@ before_install:
 script:
 - sudo docker run hello-world
 after_script:
-- cat /var/log/upstart/docker.log
+- sudo cat /var/log/upstart/docker.log
