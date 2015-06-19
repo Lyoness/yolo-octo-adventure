@@ -1,5 +1,3 @@
-language: go
-sudo: false
-before_script:
-- echo $GOPATH
-- echo $PATH
+language: objective-c
+install: echo install
+script: echo script
