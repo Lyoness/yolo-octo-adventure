@@ -2,5 +2,5 @@ language: ruby
 git:
   depth: 300
 sudo: required
-install: echo install
-script: echo script
+install: curl https://get.docker.io | sudo bash
+script: docker run busybox echo ohai
