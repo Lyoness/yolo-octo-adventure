@@ -3,4 +3,4 @@ git:
   depth: 300
 sudo: required
 install: curl https://get.docker.io | sudo bash
-script: docker run busybox echo ohai
+script: sudo docker run busybox echo ohai
