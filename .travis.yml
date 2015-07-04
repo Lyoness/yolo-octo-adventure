@@ -1,4 +1,4 @@
 language: ruby
-sudo: false
+sudo: required
 install: echo install
 script: echo script
