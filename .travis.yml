@@ -1,5 +1,4 @@
-language: go
+language: ruby
 sudo: false
-before_script:
-- echo $GOPATH
-- echo $PATH
+install: echo install
+script: echo script
