@@ -1,4 +1,4 @@
-language: ruby
+language: generic
 git:
   depth: 300
 sudo: required
