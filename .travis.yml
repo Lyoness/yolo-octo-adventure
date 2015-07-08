@@ -2,5 +2,5 @@ language: generic
 git:
   depth: 300
 sudo: required
-install: curl https://get.docker.io | sudo bash
+install: echo install I guess
 script: sudo docker run busybox echo ohai
