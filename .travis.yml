@@ -1,4 +1,4 @@
-language: generic
+language: ruby
 dist: trusty
 git:
   depth: 300
