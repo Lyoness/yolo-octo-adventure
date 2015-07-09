@@ -5,10 +5,5 @@ git:
 env:
   global:
   - PS1='$ '
-before_install:
-- for f in ~/.bash* ; do echo "----> $f" && cat $f ; done
-- echo $PATH | tr ":" "\n"
-- rvm help || echo 'no rvm?'
-- source ~/.bashrc ; rvm help || echo 'no rvm?'
 install: echo install I guess
 script: sudo docker run busybox echo ohai
