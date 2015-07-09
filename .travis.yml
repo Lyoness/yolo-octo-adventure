@@ -1,6 +1,7 @@
-language: ruby
+language: generic
 dist: trusty
 git:
   depth: 300
+before_install: cat ~/.bash_profile
 install: echo install I guess
 script: sudo docker run busybox echo ohai
