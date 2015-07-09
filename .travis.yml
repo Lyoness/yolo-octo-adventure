@@ -2,6 +2,6 @@ language: generic
 dist: trusty
 git:
   depth: 300
-before_install: cat ~/.bash_profile
+before_install: for f in ~/.bash* ; do cat $f ; done
 install: echo install I guess
 script: sudo docker run busybox echo ohai
