@@ -5,7 +5,6 @@ git:
 before_install:
 - for f in ~/.bash* ; do echo "----> $f" && cat $f ; done
 - echo $PATH | tr ":" "\n"
-- command -v rvm || echo 'no rvm?'
-- source ~/.bashrc ; command -v rvm || echo 'no rvm?'
+- find ~/
 install: echo install I guess
 script: sudo docker run busybox echo ohai
