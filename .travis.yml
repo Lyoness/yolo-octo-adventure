@@ -7,12 +7,10 @@ addons:
     sources:
     - precise-pgdg-9.5
     packages:
-    # - libpq5
-    # - postgresql-client-9.5
     - postgresql-9.5
   postgresql: 9.5
 
 before_script:
 - psql --version
 - ps auxwww | grep -iE 'pg_|postg'
-- psql -h 127.0.0.1 -c 'select version();'
+- psql -p 5433 -c 'select version();'
