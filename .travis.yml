@@ -2,6 +2,10 @@ language: go
 
 sudo: false
 
+env:
+  global:
+  - PGPORT=5433
+
 addons:
   apt:
     sources:
@@ -13,4 +17,6 @@ addons:
 before_script:
 - psql --version
 - ps auxwww | grep -iE 'pg_|postg'
-- psql -p 5433 -c 'select version();'
+- createuser -s travis
+- createdb -s travis
+- psql -c 'select version();'
