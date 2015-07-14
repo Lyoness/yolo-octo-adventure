@@ -16,7 +16,4 @@ addons:
 
 before_script:
 - psql --version
-- createdb -U postgres postgres
-- createuser -U postgres -s travis
-- createdb -U postgres -s travis
 - psql -c 'select version();'
