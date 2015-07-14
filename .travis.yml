@@ -16,4 +16,4 @@ addons:
 
 before_script:
 - psql --version
-- psql -c 'select version();'
+- psql -tAc 'select version();'
