@@ -1,6 +1,3 @@
-require 'sauce'
-require 'rspec/core/rake_task'
-
-RSpec::Core::RakeTask.new
-
-task default: :spec
+task :default do
+  puts 'ohai'
+end
