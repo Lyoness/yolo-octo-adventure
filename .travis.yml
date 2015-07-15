@@ -1,3 +1,4 @@
 language: ruby
-sudo: 9000
+# sudo: 9000
 rvm: 2.1.6
+before_script: cat ~/.bash_profile
