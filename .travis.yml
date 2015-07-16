@@ -1,4 +1,7 @@
 language: objective-c
-osx_image: beta-xcode6.3
+osx_image: xcode6.4
 install: echo install
-script: echo script
+script:
+- for f in ~/.bashrc ~/.bash_profile ; do
+    if [[ -f $f ]] ; then echo "------> $f" ; cat $f ; fi ;
+  done
