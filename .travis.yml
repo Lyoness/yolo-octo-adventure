@@ -1,5 +1,10 @@
 language: go
 sudo: false
-before_script:
-- echo $GOPATH
-- echo $PATH
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise
+    - llvm-toolchain-precise-3.6
+    packages:
+    - llvm-3.6
