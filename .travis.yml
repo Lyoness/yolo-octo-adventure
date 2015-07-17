@@ -1,5 +1,4 @@
 language: go
-sudo: false
+sudo: required
 before_script:
-- echo $GOPATH
-- echo $PATH
+- cat /etc/resolv.conf
