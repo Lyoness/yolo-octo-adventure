@@ -2,4 +2,4 @@ language: python
 sudo: 9000
 python: 3.4
 install: pip install -r requirements.txt
-script: pytest -v
+script: py.test -v
