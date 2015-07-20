@@ -1,14 +1,3 @@
-language: generic
+language: ruby
 sudo: 9000
-# rvm: 2.1.6
-before_script:
-- for f in /etc/profile /etc/bash.bashrc /etc/profile.d/* ~/.bash_profile ~/.bashrc ; do
-    if [ -f $f ] ; then echo "----> $f" ; cat $f ; fi ;
-  done
-matrix:
-  include:
-  - sudo: 9000
-  - sudo: false
-  - sudo: required
-install: echo install
-script: echo script
+rvm: 2.1.6
