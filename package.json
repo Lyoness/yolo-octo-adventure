@@ -1,0 +1,16 @@
+{
+  "name": "testthing",
+  "version": "0.1.0",
+  "author": "Travis CI",
+  "description": "Test a Thing",
+  "private": true,
+  "scripts": {
+    "test": "echo whatever lolol"
+  },
+  "dependencies": {
+    "underscore": "*"
+  },
+  "engines": {
+    "node": "0.12.x"
+  }
+}
