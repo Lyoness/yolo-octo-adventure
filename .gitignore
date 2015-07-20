@@ -25,3 +25,5 @@ _testmain.go
 Godeps/*
 !Godeps/Godeps.json
 sauce_connect.log
+
+.cache
