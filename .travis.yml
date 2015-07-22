@@ -2,8 +2,8 @@ language: erlang
 sudo: required
 
 script:
-- which sphinx-build
-- sphinx-build --version
+- find /usr -name sphinx-build
+- sphinx-build -h || true
 
 matrix:
   include:
