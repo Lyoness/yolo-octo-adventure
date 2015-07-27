@@ -1,5 +1,11 @@
-language: go
-sudo: false
-before_script:
-- echo $GOPATH
-- echo $PATH
+language: php
+install: echo install
+script:
+- python -V || true
+- python3 -V || true
+
+matrix:
+  include:
+  - sudo: false
+  - sudo: required
+  - sudo: 9000
