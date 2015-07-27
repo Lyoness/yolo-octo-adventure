@@ -1,6 +1,7 @@
 language: php
 install: echo install
 script:
+- find ~/ -name python -type f || true
 - python -V || true
 - python3 -V || true
 
@@ -9,3 +10,4 @@ matrix:
   - sudo: false
   - sudo: required
   - sudo: 9000
+    language: generic
