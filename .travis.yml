@@ -2,17 +2,26 @@ language: go
 
 sudo: false
 
-env:
-  global:
-  - PGPORT=5433
-
-addons:
-  apt:
-    sources:
-    - precise-pgdg-9.5
-    packages:
-    - postgresql-9.5
-  postgresql: 9.5
+matrix:
+  include:
+  - addons:
+      postgresql: 9.1
+  - addons:
+      postgresql: 9.2
+  - addons:
+      postgresql: 9.3
+  - addons:
+      postgresql: 9.4
+  - env:
+      global:
+      - PGPORT=5433
+    addons:
+      apt:
+        sources:
+        - precise-pgdg-9.5
+        packages:
+        - postgresql-9.5
+      postgresql: 9.5
 
 before_script:
 - psql --version
