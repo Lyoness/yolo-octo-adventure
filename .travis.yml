@@ -4,16 +4,25 @@ sudo: false
 
 matrix:
   include:
-  - addons:
+  - env:
+    - PG=9.1
+    addons:
       postgresql: 9.1
-  - addons:
+  - env:
+    - PG=9.2
+    addons:
       postgresql: 9.2
-  - addons:
+  - env:
+    - PG=9.3
+    addons:
       postgresql: 9.3
-  - addons:
+  - env:
+    - PG=9.4
+    addons:
       postgresql: 9.4
   - env:
     - PGPORT=5433
+    - PG=9.5
     addons:
       apt:
         sources:
