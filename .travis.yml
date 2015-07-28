@@ -3,3 +3,4 @@ sudo: false
 before_script:
 - echo $GOPATH
 - echo $PATH
+- date
