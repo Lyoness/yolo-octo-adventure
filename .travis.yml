@@ -1,5 +1,7 @@
-language: php
+language: ruby
+
 install: echo install
+
 script:
 - find ~/ -name python -type f || true
 - python -V || true
