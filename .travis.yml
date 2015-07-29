@@ -1,5 +1,6 @@
 language: python
-sudo: 9000
+services:
+- docker
 python: 3.4
 install: pip install -r requirements.txt
 script: py.test -v
