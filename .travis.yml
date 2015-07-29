@@ -1,6 +1,12 @@
-language: python
+language: generic
 services:
 - docker
-python: 3.4
-install: pip install -r requirements.txt
-script: py.test -v
+install: echo install
+script: echo script
+
+matrix:
+  include:
+  - language: clojure
+  - language: java
+  - language: scala
+  - language: groovy
