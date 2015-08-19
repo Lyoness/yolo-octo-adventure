@@ -7,4 +7,4 @@ services:
 
 install: echo install stuff
 
-script: echo script
+script: for i in 0 1 2 3 4 ; do echo $i 🙀  ; sleep 60 ; done
