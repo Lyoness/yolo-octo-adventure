@@ -5,6 +5,6 @@ sudo: required
 services:
 - docker
 
-install: echo install
+install: echo install stuff
 
 script: echo script
