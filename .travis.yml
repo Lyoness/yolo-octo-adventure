@@ -1,4 +1,6 @@
-language: generic
+language: ruby
+
+sudo: required
 
 services:
 - docker
@@ -6,10 +8,3 @@ services:
 install: echo install
 
 script: echo script
-
-matrix:
-  include:
-  - language: clojure
-  - language: java
-  - language: scala
-  - language: groovy
