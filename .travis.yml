@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode6.4
 install: echo install
-script: echo script
+script: curl -vvvv -LO https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/14.04/x86_64/ruby-2.1.7.tar.bz2
