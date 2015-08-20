@@ -1,4 +1,4 @@
-language: generic
-dist: trusty
+language: objective-c
+osx_image: xcode6.4
 install: echo install
-script: docker run --rm busybox echo whatever
+script: echo script
