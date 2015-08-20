@@ -2,15 +2,8 @@ language: objective-c
 
 osx_image: xcode6.4
 
-env:
-  matrix:
-  - RUBY_VERSION=1.9.3
-  - RUBY_VERSION=2.1.2
-  - RUBY_VERSION=2.1.7
-  - RUBY_VERSION=2.2.1
-  - RUBY_VERSION=2.2.2
-
 install: echo install
 
 script:
-- rvm use $RUBY_VERSION --install --binary --fuzzy
+- curl -L -vvvv -O https://rvm_io.global.ssl.fastly.net/binaries/osx/10.10/x86_64/ruby-2.1.2.tar.bz2
+- rvm use 2.1.2 --install --binary --fuzzy
