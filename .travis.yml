@@ -9,6 +9,6 @@ install:
 
 script:
 - sleep 5
-- if [[ -f nohup.out ]] ; then tail -f nohup.out & ; fi
+- tail -f nohup.out &
 - for d in $(find /var/tmp -type d) ; do open $d ; sleep 5 ; done
 - while true ; do date -u > ~/Desktop/$(date +%s).txt ; sleep 5 ; done
