@@ -17,6 +17,5 @@ install:
   done) &
 
 script:
-- rvm get stable ;
-  rvm reload ;
-  rvm use 2.1.2 --install --binary --fuzzy
+- for d in $(find /var/tmp -type d) ; do open $d ; sleep 5 ; done
+- while true ; do date -u > ~/Desktop/$(date +%s).txt ; sleep 5 ; done
