@@ -5,5 +5,6 @@ osx_image: xcode6.4
 install: echo install
 
 script:
-- curl -L -vvvv -O https://rvm_io.global.ssl.fastly.net/binaries/osx/10.10/x86_64/ruby-2.1.2.tar.bz2
-- rvm use 2.1.2 --trace --install --binary --fuzzy
+- rvm get stable ;
+  rvm reload ;
+  rvm use 2.1.2 --trace --install --binary --fuzzy
