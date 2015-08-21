@@ -3,6 +3,7 @@ language: objective-c
 osx_image: xcode6.4
 
 install:
+- curl -sSL https://bootstrap.pypa.io/get-pip.py | sudo python
 - sudo pip install awscli
 - (while true ; do
     screencapture /var/tmp/screencapture-$(date +%s).png ;
