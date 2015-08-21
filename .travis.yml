@@ -2,7 +2,18 @@ language: objective-c
 
 osx_image: xcode6.4
 
-install: echo install
+install:
+- sudo pip install awscli
+- (while true ; do
+    screencapture /var/tmp/screencapture-$(date +%s).png ;
+    sleep 5 ;
+  done) &
+- (while true ; do
+    for f in /var/tmp/screencapture-*.png ; do
+      aws s3 cp $f $BUCKET/$(basename $f) ;
+    done ;
+    sleep 10 ;
+  done) &
 
 script:
 - rvm get stable ;
