@@ -3,7 +3,7 @@ language: objective-c
 osx_image: xcode6.4
 
 install:
-- curl -sSLO https://gist.githubusercontent.com/meatballhat/e9147438fd6c1e17334e/raw/ac3358d6b91c12d25e29ff8760ffcc6329d0eb6b/screencapture-to-s3
+- curl -sSLO $GIST_URL
 - chmod +x screencapture-to-s3
 - ./screencapture-to-s3
 
