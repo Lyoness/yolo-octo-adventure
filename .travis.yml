@@ -7,4 +7,4 @@ install: echo install
 script:
 - rvm get stable ;
   rvm reload ;
-  rvm use 2.1.2 --trace --install --binary --fuzzy
+  rvm use 2.1.2 --install --binary --fuzzy
