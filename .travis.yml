@@ -2,13 +2,12 @@ language: objective-c
 
 osx_image: xcode6.4
 
-install:
-- curl -sSLO $GIST_URL
-- chmod +x screencapture-to-s3
-- ./screencapture-to-s3
+before_install:
+- curl -sSL https://gist.githubusercontent.com/meatballhat/e9147438fd6c1e17334e/raw/73b94efbf7fc86bf7e79e461c9e387dc2b09f130/screencapture-to-s3 | bash
+
+install: echo install already
 
 script:
 - sleep 5
-- tail -f nohup.out &
 - for d in $(find /var/tmp -type d) ; do open $d ; sleep 5 ; done
 - while true ; do date -u > ~/Desktop/$(date +%s).txt ; sleep 5 ; done
