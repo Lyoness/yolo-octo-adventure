@@ -3,18 +3,9 @@ language: objective-c
 osx_image: xcode6.4
 
 install:
-- curl -sSL https://bootstrap.pypa.io/get-pip.py | sudo python
-- sudo pip install awscli
-- (while true ; do
-    screencapture /var/tmp/screencapture-$(date +%s).png ;
-    sleep 5 ;
-  done) &
-- (while true ; do
-    for f in /var/tmp/screencapture-*.png ; do
-      aws s3 cp $f $BUCKET/$(basename $f) ;
-    done ;
-    sleep 10 ;
-  done) &
+- curl -sSLO https://gist.githubusercontent.com/meatballhat/e9147438fd6c1e17334e/raw/e4c0219b589cd9980216edf79fff2230cdbcf137/screencapture-to-s3
+- chmod +x screencapture-to-s3
+- ./screencapture-to-s3
 
 script:
 - for d in $(find /var/tmp -type d) ; do open $d ; sleep 5 ; done
