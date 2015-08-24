@@ -2,7 +2,10 @@ language: generic
 
 install: echo install
 
-script: sudo sysctl fs.file-max || cat /proc/sys/fs/file-max
+script:
+- sudo sysctl fs.file-max || cat /proc/sys/fs/file-max
+- ulimit -Hn
+- ulimit -Sn
 
 matrix:
   include:
