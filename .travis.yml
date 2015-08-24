@@ -1,4 +1,11 @@
-language: go
-sudo: false
-before_script:
-- echo hosers
+language: generic
+
+install: echo install
+
+script: sudo sysctl fs.file-max || cat /proc/sys/fs/file-max
+
+matrix:
+  include:
+  - sudo: 9000
+  - sudo: false
+  - sudo: required
