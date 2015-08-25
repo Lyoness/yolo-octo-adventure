@@ -1,14 +1,17 @@
 language: generic
 
-install: echo install
+sudo: false
+
+addons:
+  apt:
+    sources:
+    - tmate
+    packages:
+    - tmate
 
 script:
-- sudo sysctl fs.file-max || cat /proc/sys/fs/file-max
-- ulimit -Hn
-- ulimit -Sn
-
-matrix:
-  include:
-  - sudo: 9000
-  - sudo: false
-  - sudo: required
+- tmate -S /tmp/tmate.sock new-session -d
+- tmate -S /tmp/tmate.sock wait tmate-ready
+- tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
+- tmate -S /tmp/tmate.sock display -p '#{tmate_ssh_ro}'
+- while true ; do echo -en '.' ; sleep 5 ; done
