@@ -9,10 +9,11 @@ addons:
 
 script:
 - cp -v tmate.conf ~/.tmate.conf
-- tmate -S /tmp/tmate.sock new-session -d
-- tmate -S /tmp/tmate.sock wait tmate-ready
-- tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
-- tmate -S /tmp/tmate.sock display -p '#{tmate_ssh_ro}'
+- nohup tmate new -s whatever &
+# - tmate -S /tmp/tmate.sock new-session -d
+# - tmate -S /tmp/tmate.sock wait tmate-ready
+# - tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
+# - tmate -S /tmp/tmate.sock display -p '#{tmate_ssh_ro}'
 - while true ; do echo -en '.' ; sleep 5 ; done
 
 matrix:
