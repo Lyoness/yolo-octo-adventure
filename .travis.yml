@@ -9,9 +9,8 @@ addons:
 
 script:
 - cp -v tmate.conf ~/.tmate.conf
-- nohup tmate -S /tmp/tmate.sock new-session -s whatever &
-# - tmate -S /tmp/tmate.sock new-session -d
-# - tmate -S /tmp/tmate.sock wait tmate-ready
+- tmate -S /tmp/tmate.sock new-session -d -s whatever
+- tmate -S /tmp/tmate.sock wait tmate-ready
 - travis_retry tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
 - travis_retry tmate -S /tmp/tmate.sock display -p '#{tmate_ssh_ro}'
 - while true ; do echo -en '.' ; sleep 5 ; done
