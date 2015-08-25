@@ -1,7 +1,5 @@
 language: generic
 
-sudo: false
-
 addons:
   apt:
     sources:
@@ -16,3 +14,9 @@ script:
 - tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
 - tmate -S /tmp/tmate.sock display -p '#{tmate_ssh_ro}'
 - while true ; do echo -en '.' ; sleep 5 ; done
+
+matrix:
+  include:
+  - sudo: false
+  - sudo: 9000
+  - sudo: required
