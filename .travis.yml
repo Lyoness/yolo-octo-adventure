@@ -1,14 +1,14 @@
 language: generic
 
+services:
+- docker
+
+before_install:
+- docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+
 install: echo install
 
 script:
-- sudo sysctl fs.file-max || cat /proc/sys/fs/file-max
-- ulimit -Hn
-- ulimit -Sn
-
-matrix:
-  include:
-  - sudo: 9000
-  - sudo: false
-  - sudo: required
+- docker run --rm -it hello-world
+- docker tag hello-world travisci/hello-world:latest
+- docker push travisci/hello-world:latest
