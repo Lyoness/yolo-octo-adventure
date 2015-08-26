@@ -4,6 +4,7 @@ services:
 - docker
 
 before_install:
+- "echo $#DOCKER_EMAIL $#DOCKER_USERNAME $#DOCKER_PASSWORD"
 - docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 install: echo install
