@@ -8,4 +8,7 @@ services:
 - docker
 
 install: echo install stuff
-script: echo script whee
+script:
+- echo script whee
+- uname -a
+- sudo apparmor_status || true
