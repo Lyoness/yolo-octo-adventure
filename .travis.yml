@@ -2,7 +2,7 @@ language: perl
 
 sudo: required
 
-group: awesome
+group: edge
 
 services:
 - docker
