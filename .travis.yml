@@ -1,4 +1,4 @@
-language: ruby
+language: perl
 
 sudo: required
 
@@ -8,6 +8,7 @@ services:
 - docker
 
 install: echo install stuff
+
 script:
 - echo script whee
 - uname -a
