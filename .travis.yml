@@ -1,7 +1,4 @@
 language: go
 sudo: required
-before_install:
-- sudo apt-get install -yqq mtr
 before_script:
-- cat /etc/resolv.conf
-- sudo mtr --report --report-cycles 10 packagist.org
+- echo hosers
