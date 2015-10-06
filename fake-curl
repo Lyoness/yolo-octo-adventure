@@ -1,3 +1,12 @@
 #!/bin/bash
+
+SANITIZED_ARGS=''
+
+for arg in "$@" ; do
+  if [[ $arg != --progress-bar ]] ; then
+    SANITIZED_ARGS="$SANITIZED_ARGS $arg"
+  fi
+done
+
 set -o xtrace
-/usr/bin/curl -vvv $*
+/usr/bin/curl -vvv $SANITIZED_ARGS
