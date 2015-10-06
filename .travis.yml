@@ -1,8 +1,8 @@
 language: generic
 sudo: false
-# cache:
-#   directories:
-#   - $HOME/.meteor
+cache:
+  directories:
+  - $HOME/.meteor
 before_install:
 - mkdir -p $HOME/bin
 - cp -v ./fake-curl $HOME/bin/curl
