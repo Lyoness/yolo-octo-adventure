@@ -1,11 +1,15 @@
-language: node_js
+language: ruby
 sudo: false
-node_js: 0.10.40
 cache:
   directories:
   - $HOME/.meteor
 before_install:
-- PATH=$PATH:$HOME/.meteor
+- mkdir -p $HOME/bin
+- echo -en "#!/bin/bash\ncommand curl -vvv $*" > $HOME/bin/curl
+- chmod +x $HOME/bin/curl
+- PATH=$HOME/bin:$PATH:$HOME/.meteor
+- nvm install 0.10.40
 - if [ -d ~/.meteor ]; then ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
 - if [ ! -e $HOME/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
+install: echo nope
 script: echo A super simple install script
