@@ -4,10 +4,6 @@ sudo: false
 cache:
   directories:
   - $HOME/.meteor
-before_install:
-- echo
-- echo 'NOT DOING: PATH=$PATH:$HOME/.meteor'
-- echo 'NOT DOING: if [ -d ~/.meteor ]; then ln -s ~/.meteor/meteor /usr/local/bin/meteor ; fi'
-- echo 'NOT DOING: if [ ! -e $HOME/.meteor/meteor ]; then curl https://install.meteor.com | sh ; fi'
-script:
-- echo A super simple install script
+before_install: echo before_install
+install: echo install
+script: echo script
