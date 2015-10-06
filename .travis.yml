@@ -8,6 +8,7 @@ before_install:
 - cp -v ./fake-curl $HOME/bin/curl
 - chmod +x $HOME/bin/curl
 - PATH=$HOME/bin:$PATH:$HOME/.meteor
+- mkdir -p /home/travis/.nvm/bin/node-v0.10.40-linux-x64
 - /usr/bin/curl -vvv -L -C - --progress-bar https://nodejs.org/dist/v0.10.40/node-v0.10.40-linux-x64.tar.gz -o /home/travis/.nvm/bin/node-v0.10.40-linux-x64/node-v0.10.40-linux-x64.tar.gz
 - nvm install 0.10.40
 - if [ -d ~/.meteor ]; then ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
