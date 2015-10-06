@@ -10,6 +10,6 @@ before_install:
 - PATH=$HOME/bin:$PATH:$HOME/.meteor
 - nvm install 0.10.40
 install:
-- sha256sum /home/travis/.nvm/bin/node-v0.10.40-linux-x64/node-v0.10.40-linux-x64.tar.gz
+- echo Not really install
 script:
 - echo A super simple install script
