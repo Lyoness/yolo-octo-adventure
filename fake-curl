@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SANITIZED_ARGS=''
+SANITIZED_ARGS='-vvv'
 
 for arg in "$@" ; do
   if [[ $arg != --progress-bar ]] ; then
@@ -9,4 +9,4 @@ for arg in "$@" ; do
 done
 
 set -o xtrace
-/usr/bin/curl -vvv $SANITIZED_ARGS
+/usr/bin/curl $*
