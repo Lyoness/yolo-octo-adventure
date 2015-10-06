@@ -1,14 +1,8 @@
-language: generic
-
-install: echo install
-
-script:
-- sudo sysctl fs.file-max || cat /proc/sys/fs/file-max
-- ulimit -Hn
-- ulimit -Sn
-
-matrix:
-  include:
-  - sudo: 9000
-  - sudo: false
-  - sudo: required
+language: node_js
+sudo: false
+node_js: 0.10.40
+cache:
+  directories:
+  - $HOME/.meteor
+  - $HOME/.generated.${RANDOM}
+script: echo whatever
