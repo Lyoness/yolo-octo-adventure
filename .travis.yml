@@ -4,5 +4,8 @@ node_js: 0.10.40
 cache:
   directories:
   - $HOME/.meteor
-  - $HOME/.generated.${RANDOM}
-script: echo whatever
+before_install:
+- PATH=$PATH:$HOME/.meteor
+- if [ -d ~/.meteor ]; then ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
+- if [ ! -e $HOME/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
+script: echo A super simple install script
