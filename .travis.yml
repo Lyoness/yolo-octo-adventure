@@ -4,6 +4,10 @@ sudo: false
 cache:
   directories:
   - $HOME/.meteor
-before_install: echo before_install
-install: echo install
-script: echo script
+before_install:
+- echo before_install
+install:
+- echo install
+script:
+- echo script
+- echo script moar
