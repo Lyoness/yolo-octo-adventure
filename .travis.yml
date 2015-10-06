@@ -5,7 +5,7 @@ cache:
   - $HOME/.meteor
 before_install:
 - mkdir -p $HOME/bin
-- echo -en "#!/bin/bash\ncommand curl -vvv $*" > $HOME/bin/curl
+- cp -v ./fake-curl $HOME/bin/curl
 - chmod +x $HOME/bin/curl
 - PATH=$HOME/bin:$PATH:$HOME/.meteor
 - nvm install 0.10.40
