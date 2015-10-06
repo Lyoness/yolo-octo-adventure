@@ -9,7 +9,7 @@ before_install:
 - chmod +x $HOME/bin/curl
 - PATH=$HOME/bin:$PATH:$HOME/.meteor
 - mkdir -p /home/travis/.nvm/bin/node-v0.10.40-linux-x64
-- /usr/bin/curl -vvv -L -C - https://nodejs.org/dist/v0.10.40/node-v0.10.40-linux-x64.tar.gz -o /home/travis/.nvm/bin/node-v0.10.40-linux-x64/node-v0.10.40-linux-x64.tar.gz
+- /usr/bin/curl --progress-bar -L -C - https://nodejs.org/dist/v0.10.40/node-v0.10.40-linux-x64.tar.gz -o /home/travis/.nvm/bin/node-v0.10.40-linux-x64/node-v0.10.40-linux-x64.tar.gz
 install:
 - sha256sum /home/travis/.nvm/bin/node-v0.10.40-linux-x64/node-v0.10.40-linux-x64.tar.gz
 script:
