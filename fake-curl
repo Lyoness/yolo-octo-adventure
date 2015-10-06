@@ -9,4 +9,4 @@ for arg in "$@" ; do
 done
 
 set -o xtrace
-/usr/bin/curl $*
+/usr/bin/curl $SANITIZED_ARGS
