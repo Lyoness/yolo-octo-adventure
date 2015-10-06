@@ -7,7 +7,5 @@ env:
 cache:
   directories:
   - $HOME/.meteor
-before_install:
-- stat /dev/null/nonexistent
 script:
 - echo A super simple install script
