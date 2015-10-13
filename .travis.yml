@@ -1,14 +1,16 @@
 language: generic
 
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - dnsutils
+
 install: echo install
 
 script:
-- sudo sysctl fs.file-max || cat /proc/sys/fs/file-max
-- ulimit -Hn
-- ulimit -Sn
-
-matrix:
-  include:
-  - sudo: 9000
-  - sudo: false
-  - sudo: required
+- cat /etc/resolv.conf
+- dig google.com
+- dig github.com
+- dig erlang.org
