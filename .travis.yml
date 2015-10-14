@@ -1,4 +1,4 @@
-language: perl
+language: generic
 
 sudo: required
 
@@ -7,7 +7,10 @@ group: edge
 services:
 - docker
 
-install: echo install stuff
+install:
+- rvm list
+- rvm use default
+- bundle install --jobs=3 --retry=3
 
 script:
 - echo script whee
