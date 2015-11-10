@@ -1,4 +1,4 @@
-language: generic
+language: python
 
 sudo: required
 
@@ -7,10 +7,7 @@ group: edge
 services:
 - docker
 
-install:
-- rvm list
-- rvm use default
-- bundle install --jobs=3 --retry=3
+install: echo install
 
 script:
 - echo script whee
