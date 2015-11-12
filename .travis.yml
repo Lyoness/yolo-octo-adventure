@@ -12,3 +12,8 @@ install:
 
 script:
 - rvm use default
+
+deploy:
+  provider: heroku
+  api_key: BOGUS
+  app: bogus-app-9000
