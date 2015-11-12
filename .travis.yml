@@ -1,4 +1,4 @@
-language: ruby
+language: python
 
 sudo: required
 
@@ -12,13 +12,3 @@ install:
 
 script:
 - echo script
-- echo $-
-- "if [[ $- == *i* ]] ; then echo interactive ; else echo not interactive ; fi"
-- bash -c "if [[ $- == *i* ]] ; then echo interactive ; else echo not interactive ; fi"
-
-deploy:
-  provider: heroku
-  api_key: BOGUS
-  app: bogus-app-9000
-  on:
-    all_branches: true
