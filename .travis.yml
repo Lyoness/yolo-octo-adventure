@@ -2,12 +2,13 @@ language: python
 
 sudo: required
 
+group: dev
+
 services:
 - docker
 
-install: echo install
+install:
+- type rvm | head 1 || true
 
 script:
-- echo script whee
-- uname -a
-- sudo apparmor_status || true
+- rvm use default
