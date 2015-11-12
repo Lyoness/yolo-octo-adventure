@@ -12,6 +12,7 @@ install:
 
 script:
 - echo script
+- cat ~/.bashrc
 
 deploy:
   provider: heroku
