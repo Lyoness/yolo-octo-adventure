@@ -12,6 +12,8 @@ install:
 
 script:
 - echo script
+- "if [[ $- == *i* ]] ; then echo interactive ; else echo not interactive ; fi"
+- bash -c "if [[ $- == *i* ]] ; then echo interactive ; else echo not interactive ; fi"
 - cat ~/.bashrc
 
 deploy:
