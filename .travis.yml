@@ -2,9 +2,6 @@ language: go
 
 sudo: required
 
-services:
-- docker
-
 install:
 - type rvm | head -1 || true
 
