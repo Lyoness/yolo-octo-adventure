@@ -2,8 +2,7 @@ language: go
 
 services: docker
 
-install:
-- type rvm | head -1 || true
+install: echo haaay
 
 script:
 - echo script
