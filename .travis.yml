@@ -7,12 +7,17 @@ dist: trusty
 matrix:
   include:
   - sudo: required
+    env: SUDO=required
   - sudo: required
     dist: trusty
+    env: SUDO=required DIST=trusty
   - services: docker
+    env: SERVICES=docker
   - services: docker
     dist: trusty
+    env: SERVICES=docker DIST=trusty
   - sudo: false
+    env: SUDO=false
 
 install: echo haaay
 
