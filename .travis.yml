@@ -1,9 +1,5 @@
 language: go
 
-sudo: required
-
-dist: trusty
-
 matrix:
   include:
   - sudo: required
