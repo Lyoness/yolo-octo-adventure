@@ -4,6 +4,6 @@ sudo: required
 
 group: dev
 
-install: echo haaay
+install: echo haaay installl
 
-script: echo script
+script: echo haaay scriiiiipt
