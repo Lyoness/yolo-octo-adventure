@@ -1,21 +1,9 @@
-language: go
+language: ruby
 
-matrix:
-  include:
-  - sudo: required
-    env: MATRIX=1 SUDO=required
-  - sudo: required
-    dist: trusty
-    env: MATRIX=2 SUDO=required DIST=trusty
-  - services: docker
-    env: MATRIX=3 SERVICES=docker
-  - services: docker
-    dist: trusty
-    env: MATRIX=4 SERVICES=docker DIST=trusty
-  - sudo: false
-    env: MATRIX=5 SUDO=false
+sudo: required
+
+group: edge
 
 install: echo haaay
 
-script:
-- echo script
+script: echo script
