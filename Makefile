@@ -1,11 +1,7 @@
 GOPATH_TOP := $(shell echo $${GOPATH%%:*})
 
-GO ?= go
-CP ?= cp
-MKDIR ?= mkdir -p
-
 .PHONY: heroku
 heroku:
-	$(GO) install -x $(GO_IMPORT_PATH)/cmd/... && \
-		$(MKDIR) ./bin/ && \
-		$(CP) -v $(GOPATH_TOP)/bin/yolo-octo-adventure ./bin/
+	go install -x github.com/meatballhat/yolo-octo-adventure/... && \
+		mkdir -p ./bin/ && \
+		cp -v $(GOPATH_TOP)/bin/yolo-octo-adventure ./bin/
