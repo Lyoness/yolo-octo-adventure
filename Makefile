@@ -7,6 +7,6 @@ MKDIR ?= mkdir -p
 .PHONY: heroku
 heroku:
 	export GOPATH=$(GOPATH_TOP) ; \
-		$(GO) install -x github.com/meatballhat/yolo-octo-adventure/cmd/... && \
+		$(GO) install -x $(GO_IMPORT_PATH)/cmd/... && \
 		$(MKDIR) ./bin/ && \
 		$(CP) -v $(GOPATH_TOP)/bin/yolo-octo-adventure ./bin/
