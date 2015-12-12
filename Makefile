@@ -6,7 +6,8 @@ MKDIR ?= mkdir -p
 
 .PHONY: heroku
 heroku:
-	export GOPATH=$(GOPATH_TOP) ; \
-		$(GO) install -x $(GO_IMPORT_PATH)/cmd/... && \
+	@echo GOPATH=$(GOPATH)
+	@find $(GOPATH_TOP)/src -wholename '*$(GO_IMPORT_PATH)*'
+	$(GO) install -x $(GO_IMPORT_PATH)/cmd/... && \
 		$(MKDIR) ./bin/ && \
 		$(CP) -v $(GOPATH_TOP)/bin/yolo-octo-adventure ./bin/
