@@ -1,3 +1,6 @@
+.PHONY: all
+all: heroku
+
 .PHONY: heroku
 heroku:
 	go install -x $(GO_IMPORT_PATH)/... && \
