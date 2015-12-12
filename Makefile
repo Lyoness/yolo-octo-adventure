@@ -6,6 +6,7 @@ MKDIR ?= mkdir -p
 
 .PHONY: heroku
 heroku:
+	@echo ohai
 	$(GO) install -x $(GO_IMPORT_PATH)/cmd/... && \
 		$(MKDIR) ./bin/ && \
 		$(CP) -v $(GOPATH_TOP)/bin/yolo-octo-adventure ./bin/
