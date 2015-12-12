@@ -4,7 +4,7 @@ GOPATH_TOP := $(shell echo $${GOPATH%%:*})
 heroku:
 	@echo $${GOPATH}
 	@echo
-	@find $${GOPATH}/src
+	@find $${GOPATH}/src/github.com/meatballhat/yolo-octo-adventure/
 	@echo
 	@pwd
 	@echo
