@@ -6,4 +6,4 @@ group: edge
 
 install: sudo apt-get install -y dnsutils
 
-script: dig google.com
+script: dig @8.8.8.8 google.com
