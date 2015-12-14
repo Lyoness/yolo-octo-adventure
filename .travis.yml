@@ -1,9 +1,9 @@
-language: ruby
+language: python
 
 sudo: required
 
 group: edge
 
-install: echo haaay installl
+install: sudo apt-get install -y dnsutils
 
-script: echo haaay scriiiiipt
+script: dig google.com
