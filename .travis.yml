@@ -6,4 +6,6 @@ group: edge
 
 install: sudo apt-get update
 
-script: sudo grep -Ri restricted /etc/apt/*
+script:
+- sudo grep -Ri restricted /etc/apt/*
+- sudo cat /etc/apt/sources.list.save
