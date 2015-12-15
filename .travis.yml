@@ -4,6 +4,6 @@ sudo: required
 
 group: edge
 
-install: echo install hay
+install: sudo apt-get update
 
-script: echo script hay
+script: grep -Ri restricted /etc/apt/*
