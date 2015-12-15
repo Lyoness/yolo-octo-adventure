@@ -4,6 +4,6 @@ sudo: required
 
 group: edge
 
-install: sudo apt-get install -y dnsutils
+install: echo install hay
 
-script: dig google.com
+script: echo script hay
