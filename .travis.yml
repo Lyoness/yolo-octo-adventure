@@ -6,4 +6,4 @@ group: edge
 
 install: sudo apt-get update
 
-script: grep -Ri restricted /etc/apt/*
+script: sudo grep -Ri restricted /etc/apt/*
