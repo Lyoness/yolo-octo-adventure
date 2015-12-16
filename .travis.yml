@@ -1,17 +1,17 @@
-language: python
+language: java
 
 sudo: required
 
-dist: trusty
+dist: precise
 
 group: edge
 
-install: sudo apt-get update
+install: echo install hay
 
 script:
-- sudo apt-get install fglrx
-- sudo grep -Ri restricted /etc/apt/sources.list*
-- sudo apt-add-repository -y restricted
+- echo 'yes' | sudo add-apt-repository ppa:cubrid/cubrid
 - sudo apt-get update
-- sudo apt-get install fglrx
-- sudo grep -Ri restricted /etc/apt/sources.list*
+- sudo apt-get install cubrid
+- sudo apt-get install cubrid-demodb
+- /etc/profile.d/cubrid.sh
+- hostname | sed 's/^/127.0.0.1 /g' | cat - /etc/hosts > /tmp/etchoststemp && sudo mv /tmp/etchoststemp /etc/hosts --force
