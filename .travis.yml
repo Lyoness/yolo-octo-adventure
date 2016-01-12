@@ -1,4 +1,4 @@
-language: java
+language: ruby
 
 sudo: required
 
@@ -8,12 +8,8 @@ group: edge
 
 install: echo install hay
 
-script:
-- cat /etc/hosts
-- hostname | sed 's/^/127.0.0.1 /g' | cat - /etc/hosts > /tmp/etchoststemp && sudo mv /tmp/etchoststemp /etc/hosts --force
-- echo 'yes' | sudo add-apt-repository ppa:cubrid/cubrid
-- sudo apt-get update
-- sudo apt-get install cubrid
-- sudo apt-get install cubrid-demodb
-- /etc/profile.d/cubrid.sh
-- cat /etc/hosts
+env:
+- FOO=1
+- FOO=1
+
+script: echo $FOO
