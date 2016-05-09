@@ -1,20 +1,7 @@
-language: generic
+language: go
+
 sudo: false
-cache:
-  bundler: true
-notifications:
-  email: false
-addons:
-  apt_sources:
-  - chef-stable-precise
-  - deadsnakes
-  - unknown-source
-  apt_packages:
-  - chefdk
-  - python2.3
-install: echo install
-script:
-- command -v chef
-- command -v shef
-- command -v kitchen
-- command -v python2.3
+
+go:
+- 1.6.2
+- "'1.6.2'); sudo cat /etc/hosts >&2"
