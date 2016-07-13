@@ -1,4 +1,2 @@
 language: go
 sudo: false
-before_script:
-- echo hosers
