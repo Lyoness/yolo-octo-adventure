@@ -19,6 +19,5 @@ go:
 - '1.x.x'
 - '1.7rc2'
 - 'default'
-- 'go1'
 - 'tip'
 - 'master'
