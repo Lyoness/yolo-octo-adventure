@@ -1,7 +1,6 @@
 language: ruby
-
 sudo: false
-
+dist: trusty
 env:
 - FOO=0
 - FOO=1
@@ -13,6 +12,5 @@ env:
 - FOO=7
 - FOO=8
 - FOO=9
-
 install: echo nope
 script: echo still nope
