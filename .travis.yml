@@ -1,11 +1,18 @@
-language: go
+language: ruby
 
 sudo: false
 
-go:
-  - 1
-  - 1.x
-  - 1.x.x
-  - 1.7
+env:
+- FOO=0
+- FOO=1
+- FOO=2
+- FOO=3
+- FOO=4
+- FOO=5
+- FOO=6
+- FOO=7
+- FOO=8
+- FOO=9
 
-script: echo hai
+install: echo nope
+script: echo still nope
