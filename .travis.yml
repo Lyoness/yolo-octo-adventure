@@ -4,5 +4,5 @@ sudo: false
 
 install: echo install
 script:
-- which nvm
+- type nvm | head -1
 - nvm --version
