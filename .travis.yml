@@ -1,14 +1,8 @@
-language: generic
+language: node-js
+
+sudo: false
 
 install: echo install
-
 script:
-- sudo sysctl fs.file-max || cat /proc/sys/fs/file-max
-- ulimit -Hn
-- ulimit -Sn
-
-matrix:
-  include:
-  - sudo: 9000
-  - sudo: false
-  - sudo: required
+- which nvm
+- nvm --version
