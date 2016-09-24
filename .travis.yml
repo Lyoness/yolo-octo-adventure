@@ -1,6 +1,6 @@
 language: ruby
 sudo: false
-# dist: trusty
+dist: trusty
 env:
 - FOO=0
 - FOO=1
