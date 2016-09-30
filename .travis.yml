@@ -1,6 +1,9 @@
 language: ruby
 sudo: false
 dist: trusty
+cache:
+  directories:
+  - money
 env:
 - FOO=0
 - FOO=1
@@ -12,5 +15,5 @@ env:
 - FOO=7
 - FOO=8
 - FOO=9
-install: echo nope
-script: echo still nope
+install: mkdir -p money
+script: echo still nope $RANDOM | tee money/dollar
