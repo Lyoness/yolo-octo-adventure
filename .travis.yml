@@ -7,5 +7,4 @@ addons:
     - a2ps
     - aspell-ru
 script:
-- sudo echo whatebber
-- sudo naw really
+- echo whatebber
