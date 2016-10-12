@@ -6,4 +6,6 @@ addons:
     packages:
     - a2ps
     - aspell-ru
-script: sudo echo whatebber
+script:
+- sudo echo whatebber
+- sudo naw really
