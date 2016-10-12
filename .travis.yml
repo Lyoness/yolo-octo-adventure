@@ -1,19 +1,9 @@
 language: ruby
 sudo: false
 dist: trusty
-cache:
-  directories:
-  - money
-env:
-- FOO=0
-- FOO=1
-- FOO=2
-- FOO=3
-- FOO=4
-- FOO=5
-- FOO=6
-- FOO=7
-- FOO=8
-- FOO=9
-install: mkdir -p money
-script: echo still nope $RANDOM | tee money/dollar
+addons:
+  apt:
+    packages:
+    - a2ps
+    - aspell-ru
+script: echo whatebber
