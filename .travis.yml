@@ -1,5 +1,5 @@
 language: ruby
-sudo: required
+sudo: false
 dist: trusty
 before_install: '[[ "${TRAVIS_TAG}" ]] || travis_terminate 0'
 install: echo lol
