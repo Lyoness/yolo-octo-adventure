@@ -1,16 +1,6 @@
 language: ruby
 sudo: required
 dist: trusty
-env:
-- FOO=0
-- FOO=1
-- FOO=2
-- FOO=3
-- FOO=4
-- FOO=5
-- FOO=6
-- FOO=7
-- FOO=8
-- FOO=9
-install: echo lel
-script: echo nah "${FOO}"
+before_install: '[[ "${TRAVIS_TAG}" ]] || travis_terminate 0'
+install: echo lol
+script: echo nah
