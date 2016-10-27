@@ -3,5 +3,8 @@ sudo: false
 cache:
   directories:
   - money
-install: mkdir -p money
+install:
+- mkdir -p money
+- rvm list | grep 2.2.5 || true
+- rvm list | grep 1.9.3 || true
 script: echo holler $RANDOM | tee money/dollar
