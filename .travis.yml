@@ -5,7 +5,7 @@ cache:
   - money
 install:
 - mkdir -p money
-- export TRAVIS_INTERNAL_DEFAULT_RUBY="$(rvm list | awk -F- '/ruby-(2\.[0-2]|1\.9\.[0-9])/ { print $2 }' | sort -n -r | head -1)"
+- export TRAVIS_INTERNAL_DEFAULT_RUBY="$(rvm list | awk -F- '/ruby-(2\.[0-2]|1\.9\.[0-9])/ { print $2 }' | awk '{ print $1 }' | sort -n -r | head -1)"
 script:
 - echo "detected TRAVIS_INTERNAL_DEFAULT_RUBY=$TRAVIS_INTERNAL_DEFAULT_RUBY"
 - rvm "${TRAVIS_INTERNAL_DEFAULT_RUBY}" --fuzzy do ruby -e 'puts ohai'
