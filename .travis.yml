@@ -5,6 +5,8 @@ cache:
   - money
 install:
 - mkdir -p money
+- export TRAVIS_INTERNAL_DEFAULT_RUBY="$(rvm list | awk -F- '/ruby-[12]\.[0-9]\.[0-9]/ { print $2 }')"
+- echo "detected TRAVIS_INTERNAL_DEFAULT_RUBY=$TRAVIS_INTERNAL_DEFAULT_RUBY"
 - rvm list | if grep -E '\b2\.2\.5\b' ; then echo 'we have 2.2.5' ; fi
 - rvm list | if grep -E '\b1\.9\.3\b' ; then echo 'we have 1.9.3' ; fi
 script: echo holler $RANDOM | tee money/dollar
