@@ -3,4 +3,4 @@ cache:
   directories:
   - money
 install: mkdir -p money
-script: echo still nope $RANDOM | tee money/dollar
+script: echo holler $RANDOM | tee money/dollar
