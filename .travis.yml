@@ -10,3 +10,5 @@ install:
 - mkdir -p money
 script:
 - echo holler $RANDOM | tee money/dollar
+after_script:
+- find ~/.casher -name '*.log' -type f | while read -r l; do echo "---> ${l}:"; cat "${l}"; done
