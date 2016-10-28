@@ -1,15 +1,6 @@
-language: ruby
-sudo: false
-rvm:
-- 2.3.1
-cache:
-  debug: true
-  directories:
-  - money
-install:
-- mkdir -p money
-script:
-- echo holler $RANDOM | tee money/dollar
-after_script:
-- find ~/.casher -name '*.log' -type f | while read -r l; do echo "---> ${l}:"; cat "${l}"; done
-- grep -A13 travis_internal_ruby ~/build.sh
+language: __connie__
+sudo: required
+dist: trusty
+group: dev
+install: echo install
+script: echo script
