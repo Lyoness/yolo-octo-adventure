@@ -3,4 +3,4 @@ sudo: required
 dist: trusty
 group: dev
 install: echo install
-script: echo script
+script: sudo iptables -L
