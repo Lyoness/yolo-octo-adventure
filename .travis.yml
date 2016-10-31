@@ -13,4 +13,4 @@ script:
 - echo holler $RANDOM | tee money/dollar
 after_script:
 - find ~/.casher -name '*.log' -type f | while read -r l; do echo "---> ${l}:"; cat "${l}"; done
-- cat ~/build.sh | bzip2 | base64
+- file ~/.casher -name casher -type f | xargs cat
