@@ -1,23 +1,9 @@
 language: ruby
-
 sudo: required
-
 dist: precise
-
 group: edge
-
-install: echo install hay
-
-env:
-- FOO=0
-- FOO=1
-- FOO=2
-- FOO=3
-- FOO=4
-- FOO=5
-- FOO=6
-- FOO=7
-- FOO=8
-- FOO=9
-
-script: echo $FOO
+cache:
+  directories:
+  - money
+install: mkdir -p money
+script: echo $RANDOM >money/dollerz
