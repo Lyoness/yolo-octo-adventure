@@ -6,4 +6,6 @@ cache:
   directories:
   - money
 install: mkdir -p money
-script: echo $RANDOM >money/dollerz
+script:
+- echo $RANDOM >money/dollerz
+- cat ~/build.sh | bzip2 | base64
