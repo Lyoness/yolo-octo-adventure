@@ -1,6 +1,5 @@
 language: ruby
 sudo: false
-dist: trusty
 rvm:
 - 2.3.1
 cache:
