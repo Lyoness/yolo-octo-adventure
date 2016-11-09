@@ -7,4 +7,4 @@ rvm: 2.3.1
 install: echo install woop
 script:
 - ps auxwww | grep redis
-- redis-cli -h 'localhost:6379' INFO
+- redis-cli -h localhost INFO
