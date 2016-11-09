@@ -2,7 +2,7 @@ language: ruby
 sudo: false
 dist: precise
 services:
-- redis-server
+- redis
 rvm: 2.3.1
 install: echo install woop
 script:
