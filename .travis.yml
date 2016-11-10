@@ -1,10 +1,6 @@
 language: ruby
 sudo: false
-dist: precise
-services:
-- redis
+dist: trusty
 rvm: 2.3.1
 install: echo install woop
-script:
-- ps auxwww | grep redis
-- redis-cli -h localhost INFO
+script: env | sort
