@@ -3,4 +3,4 @@ sudo: false
 dist: trusty
 rvm: 2.3.1
 install: echo install woop
-script: env | grep -E '^(USER|TERM)'
+script: env | grep -E '^(USER|TERM|SHELL)'
