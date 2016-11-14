@@ -23,5 +23,6 @@ env:
 - FOO=17
 - FOO=18
 - FOO=19
-install: echo install woop
-script: uname -a
+script:
+- uname -a
+- bundle exec chirp scripts
