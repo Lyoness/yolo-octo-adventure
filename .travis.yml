@@ -1,13 +1,8 @@
 language: ruby
-
 sudo: required
-
-dist: precise
-
+dist: trusty
 group: edge
-
 install: echo install hay
-
 env:
 - FOO=0
 - FOO=1
@@ -19,5 +14,4 @@ env:
 - FOO=7
 - FOO=8
 - FOO=9
-
 script: echo $FOO
