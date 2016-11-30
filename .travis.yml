@@ -11,3 +11,4 @@ script:
 - cat /etc/hhvm/php.ini
 - grep -E 'mysql.*socket' ~/.phpenv/versions/*/etc/php.ini
 - "mysql -e 'SHOW VARIABLES LIKE \"%version%\";' || true"
+- php -f mysql-test.php </dev/null
