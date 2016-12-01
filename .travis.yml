@@ -17,6 +17,10 @@ matrix:
 			sudo: required
 			dist: trusty
 			group: edge
+		- env: "image=sudo trusty deprecated"
+			sudo: required
+			dist: trusty
+			group: deprecated
 		- env: "image=sudo precise stable"
 			sudo: required
 			dist: precise
