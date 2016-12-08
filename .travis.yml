@@ -1,6 +1,6 @@
 language: go
 sudo: false
-dist: trusty
+dist: precise
 go:
 - default
 - 1
