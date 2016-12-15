@@ -1,5 +1,5 @@
-language: ruby
-sudo: required
+language: node_js
+sudo: false
 dist: trusty
 group: edge
 install: echo install hay
