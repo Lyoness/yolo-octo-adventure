@@ -1,17 +1,9 @@
-language: node_js
-sudo: false
+language: haskell
 dist: trusty
-group: edge
-install: echo install hay
-env:
-- FOO=0
-- FOO=1
-- FOO=2
-- FOO=3
-- FOO=4
-- FOO=5
-- FOO=6
-- FOO=7
-- FOO=8
-- FOO=9
-script: echo $FOO
+group: haskell-test
+ghc:
+- 7.4
+- 7.6
+- 7.8
+- 7.10
+- 8.0

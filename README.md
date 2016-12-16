@@ -1,4 +1,2 @@
-yolo-octo-adventure
-===================
-
-Travis Go test project
+haskell-test-staging
+====================
