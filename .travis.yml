@@ -1,17 +1,10 @@
-language: node_js
-sudo: false
+language: ruby
+sudo: required
 dist: trusty
 group: edge
 install: echo install hay
-env:
-- FOO=0
-- FOO=1
-- FOO=2
-- FOO=3
-- FOO=4
-- FOO=5
-- FOO=6
-- FOO=7
-- FOO=8
-- FOO=9
-script: echo $FOO
+script:
+- docker pull travisci/ci-standard:packer-1483675042
+- docker tag travisci/ci-standard:packer-1483675042 travisci/ci-standard:2017Q1
+- git clone https://github.com/travis-ci/packer-templates.git
+- DOCKER_DEST=travisci/ci-standard:2017Q1 ./packer-templates/bin/docker-push
