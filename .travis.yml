@@ -7,3 +7,4 @@ script:
 - curl -i registry-elb-shared-1.aws-us-east-1.travisci.net/v2/_catalog 2>&1 ; echo
 - curl -i registry-elb-shared-1.aws-us-east-1.travisci.net/v2/travisci/ci-standard/tags/list 2>&1 ; echo
 - curl -i registry-elb-shared-1.aws-us-east-1.travisci.net/v2/travisci/ci-standard/manifests/2016Q4 2>&1 ; echo
+- curl -X DELETE -i 'http://registry-elb-shared-1.aws-us-east-1.travisci.net/v2/travisci/ci-standard/manifests/sha256:628a150b0e2761e4e780d42a49487d0bda674fa237f8bd9082f65945cb2fee49' 2>&1 ; echo
