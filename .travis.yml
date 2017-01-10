@@ -1,28 +1,20 @@
-language: ruby
-sudo: false
-dist: trusty
-rvm: 2.3.1
-env:
-- FOO=00
-- FOO=01
-- FOO=02
-- FOO=03
-- FOO=04
-- FOO=05
-- FOO=06
-- FOO=07
-- FOO=08
-- FOO=09
-- FOO=10
-- FOO=11
-- FOO=12
-- FOO=13
-- FOO=14
-- FOO=15
-- FOO=16
-- FOO=17
-- FOO=18
-- FOO=19
+language: python
+python: 3.4.3
+matrix:
+  include:
+  - sudo: false
+    dist: trusty
+    env: INFRA=ec2 DIST=trusty
+  - sudo: required
+    dist: trusty
+    env: INFRA=gce DIST=trusty
+  - sudo: false
+    dist: precise
+    env: INFRA=ec2 DIST=precise
+  - sudo: required
+    dist: precise
+    env: INFRA=gce DIST=precise
 script:
-- uname -a
-- bundle exec chirp scripts
+- ./download-tlsv12 'https://releases.hashicorp.com/packer/0.12.1/packer_0.12.1_linux_amd64.zip' 'packer.zip'
+- if [[ -f packer.zip ]]; then unzip packer.zip; fi
+- curl -sSL -vvvv -O 'https://releases.hashicorp.com/packer/0.12.1/packer_0.12.1_linux_amd64.zip'
