@@ -2,10 +2,11 @@ language: ruby
 sudo: false
 dist: trusty
 rvm: 2.3.1
+addons:
+  system_info: true
+env: SYSTEM_INFO=yes
 matrix:
   include:
-  - addons: { system_info: true }
-    env: SYSTEM_INFO=yes
   - addons: {}
     env: SYSTEM_INFO=no
 script: echo whatebber
