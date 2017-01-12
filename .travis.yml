@@ -9,4 +9,4 @@ matrix:
   include:
   - addons: {}
     env: SYSTEM_INFO=no
-script: echo whatebber
+script: echo hayyy
