@@ -2,27 +2,6 @@ language: ruby
 sudo: false
 dist: precise
 rvm: 2.3.1
-env:
-- FOO=00
-- FOO=01
-- FOO=02
-- FOO=03
-- FOO=04
-- FOO=05
-- FOO=06
-- FOO=07
-- FOO=08
-- FOO=09
-- FOO=10
-- FOO=11
-- FOO=12
-- FOO=13
-- FOO=14
-- FOO=15
-- FOO=16
-- FOO=17
-- FOO=18
-- FOO=19
 script:
 - uname -a
-- bundle exec chirp scripts
+- git --version
