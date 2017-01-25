@@ -1,6 +1,6 @@
 language: ruby
 sudo: false
-dist: precise
+dist: trusty
 rvm: 2.3.1
 env:
 - N=01
