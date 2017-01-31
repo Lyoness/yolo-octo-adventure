@@ -1,7 +1,23 @@
 language: ruby
-sudo: false
+sudo: required
 dist: precise
 rvm: 2.3.1
+matrix:
+  include:
+  - language: erlang
+  - language: go
+  - language: haskell
+  - language: java
+  - language: node_js
+  - language: perl
+  - language: php
+  - language: python
+  - { language: __amethyst__, dist: trusty }
+  - { language: __connie__, dist: trusty }
+  - { language: __garnet__, dist: trusty }
+  - { language: __sugilite__, dist: trusty }
+
+install: echo nah
 script:
 - uname -a
 - git --version
