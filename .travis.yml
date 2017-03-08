@@ -5,4 +5,5 @@ services:
 - mysql
 script:
 - travis_mysql_ping
-- mysql <pettable.sql
+- mysql <<<'CREATE DATABASE menagerie'
+- mysql menagerie <pettable.sql
