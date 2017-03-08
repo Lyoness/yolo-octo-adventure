@@ -7,3 +7,4 @@ script:
 - travis_mysql_ping
 - mysql <<<'CREATE DATABASE menagerie'
 - mysql menagerie <pettable.sql
+- mysql-stress-test.pl --verbose
