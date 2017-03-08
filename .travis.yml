@@ -3,10 +3,12 @@ sudo: required
 dist: trusty
 services:
 - mysql
-install:
-- sudo apt-cache search mysql | grep test
+addons:
+  apt:
+    packages:
+    - mysql-testsuite-5.6
 script:
 - travis_mysql_ping
 - mysql <<<'CREATE DATABASE menagerie'
 - mysql menagerie <pettable.sql
-- find / -name mysql-stress-test.pl
+- sudo find /usr -name mysql-stress-test.pl
