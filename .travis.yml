@@ -1,10 +1,14 @@
 language: ruby
 sudo: required
 dist: trusty
+addons:
+  apt:
+    packages:
+    - mysql-testsuite
 services:
 - mysql
 script:
 - travis_mysql_ping
 - mysql <<<'CREATE DATABASE menagerie'
 - mysql menagerie <pettable.sql
-- find /usr -name mysql-stress-test.pl
+- find / -name mysql-stress-test.pl
