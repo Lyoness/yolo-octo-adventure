@@ -11,4 +11,4 @@ script:
 - travis_mysql_ping
 - mysql <<<'CREATE DATABASE menagerie'
 - mysql menagerie <pettable.sql
-- sudo find /usr -name mysql-stress-test.pl
+- /usr/lib/mysql-testsuite/mysql-stress-test.pl
