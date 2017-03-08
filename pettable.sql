@@ -5,4 +5,6 @@ CREATE TABLE pet (
   bit CHAR(1),
   created_at DATE,
   death_process_at DATE
-)
+);
+
+SELECT NOW();
