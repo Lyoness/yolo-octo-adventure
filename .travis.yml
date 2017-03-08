@@ -1,12 +1,10 @@
 language: ruby
 sudo: required
 dist: trusty
-addons:
-  apt:
-    packages:
-    - mysql-testsuite
 services:
 - mysql
+install:
+- sudo apt-cache search mysql | grep test
 script:
 - travis_mysql_ping
 - mysql <<<'CREATE DATABASE menagerie'
