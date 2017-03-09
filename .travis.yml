@@ -6,6 +6,7 @@ group: edge
 android:
   components:
   - tools
+  - tools
   - build-tools-19.0.3
   - sys-img-armeabi-v7a-android-24
   - sys-img-armeabi-v7a-android-25
