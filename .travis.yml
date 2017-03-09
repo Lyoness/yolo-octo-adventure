@@ -3,5 +3,8 @@ sudo: false
 addons:
   artifacts:
     target-paths: build/linux/amd64/
+    paths:
+    - ./build
+    - ~/gopath
 after_script:
 - cp -v ~/gopath/bin/yolo-octo-adventure ./
