@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o xtrace
+
+echo "Attempting to sign macOS binaries"
+
+export CERTIFICATE_P12="certificate.p12"
+export KEYCHAIN="build.keychain"
+
+if [[ "${MACOS_SIGN_CERT}" ]]; then
+  echo "${MACOS_SIGN_CERT}" | base64 --decode >"${CERTIFICATE_P12}"
+fi
+
+echo "Creating keychain..."
+security create-keychain -p travisci "${KEYCHAIN}"
+
+echo "Setting default keychain..."
+security default-keychain -s "${KEYCHAIN}"
+
+echo "Unlocking keychain..."
+security unlock-keychain -p travisci "${KEYCHAIN}"
+
+echo "Importing code signing certificate"
+security import "${CERTIFICATE_P12}" -k "${KEYCHAIN}" -P floof -T /usr/bin/codesign
+
+security set-key-partition-list -S apple-tool:,apple: -s -k travisci "${KEYCHAIN}"
