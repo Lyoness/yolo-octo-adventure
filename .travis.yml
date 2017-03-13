@@ -5,6 +5,7 @@ install: echo install
 script:
 - sudo sysctl fs.file-max || cat /proc/sys/fs/file-max
 - ulimit -Hn
+- echo notbork
 - ulimit -Sn
 
 matrix:
