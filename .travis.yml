@@ -1,6 +1,5 @@
 language: ruby
-sudo: required
+sudo: false
 dist: trusty
 script:
-- sudo apt-get update
-- sudo apt-cache search redis
+- for i in 0 1 2 3; do date -u; echo haaaay; sleep 30; done
