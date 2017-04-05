@@ -1,5 +1,6 @@
 language: ruby
 sudo: required
 dist: precise
+os: power
 install: echo install hay
 script: echo oh hiiii
