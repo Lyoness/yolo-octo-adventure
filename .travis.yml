@@ -1,4 +1,5 @@
 language: ruby
 os: power
+dist: trusty
 install: echo install hay
 script: echo oh hiiii
