@@ -1,5 +1,9 @@
 language: generic
 
+git:
+  depth: 5
+  lfs_skip_smudge: true
+
 install: echo install
 
 script:
