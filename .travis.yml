@@ -1,15 +1,18 @@
-language: generic
-
-install: echo install
-
+language: __connie__
+sudo: required
+dist: trusty
+group: stable
 script:
-- sudo sysctl fs.file-max || cat /proc/sys/fs/file-max
-- ulimit -Hn
-- echo notbork
-- ulimit -Sn
-
+- curl -sSLO https://raw.githubusercontent.com/travis-ci/packer-templates/master/packer-scripts/dump-dpkg-manifest
+- chmod +x dump-dpkg-manifest
+- sudo ./dump-dpkg-manifest | tee dpkg-manifest.json
 matrix:
   include:
-  - sudo: 9000
-  - sudo: false
-  - sudo: required
+  - language: __garnet__
+    env: STACK=garnet
+  - language: __amethyst__
+    env: STACK=amethyst
+  - language: __sugilite__
+    env: STACK=sugilite
+  - language: __connie__
+    env: STACK=connie
