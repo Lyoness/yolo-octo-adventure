@@ -1,6 +1,4 @@
-language: ruby
 sudo: required
 dist: trusty
-rvm: 2.3.1
 install: echo install isthisthingon
 script: env | grep -E '^(USER|TERM)'
