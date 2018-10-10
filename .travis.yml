@@ -1,5 +1,5 @@
 language: ruby
 sudo: required
-dist: precise
+dist: trusty
 install: echo install hay
 script: echo oh hiiii
